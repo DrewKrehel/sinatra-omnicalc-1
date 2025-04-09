@@ -47,7 +47,7 @@ get("/payment/results") do
   @user_apr = params.fetch("user_apr").to_f
   @user_years = params.fetch("user_years").to_f
   @user_pv = params.fetch("user_pv").to_f
-  @apr_convert = ((@user_apr/100)/12)
+  @apr_convert = (@user_apr/100)/12
   @years_convert = @user_years * 12
   @payment_result 
 
