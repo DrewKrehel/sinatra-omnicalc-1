@@ -12,9 +12,22 @@ get("/square/new") do
 end
 
 get("/square/results") do
-  @user_number = params.fetch("number").to_i
+  @user_number = params.fetch("number").to_f
 
   @square_result = @user_number * @user_number
 
-  erb(:square_result)
+  erb(:square_results)
+end
+
+get("/square_root/new") do
+
+  erb(:square_form)
+end
+
+get("/square_root/results") do
+  @user_number = params.fetch("number").to_f
+
+  @square_result = @user_number ** 0.5
+
+  erb(:square_results)
 end
