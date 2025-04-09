@@ -21,7 +21,7 @@ end
 
 get("/square_root/new") do
 
-  erb(:square_form)
+  erb(:square_root_form)
 end
 
 get("/square_root/results") do
@@ -29,5 +29,5 @@ get("/square_root/results") do
 
   @square_result = @user_number ** 0.5
 
-  erb(:square_results)
+  erb(:square_root_results)
 end
